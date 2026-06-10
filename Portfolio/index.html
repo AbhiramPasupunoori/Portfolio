@@ -1,105 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>My Portfolio</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   
-<nav class="navbar">
-    <div class="logo">Abhiram Portfolio</div>
 
-   
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Abhiram Portfolio</title>
 
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        <button id="theme-btn">🌙</button>
-    </div>
-    
-</nav>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <header>
+
+            <nav class="navbar">
 
 
-<section class="hero">
-    <img src="images/profile.jpeg" alt="Profile Photo" class="profile-pic">
+                <div class="logo">
+                    Abhiram<span>.</span>
+                </div>
 
-    <h1>Hello, I'm Abhiram Pasupunoori 👋</h1>
+                <ul class="nav-menu">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>    
+                </ul>
 
-    <p>
-        Java Developer | Web Developer
-    </p>
+                <a href="contact.html" class="resume-nav-btn">
+                    
+                    Lets's Talk
+                </a>
+        
+            </nav>
 
-    <div class="hero-button">
+        </header>
 
-        <a href="projects.html" class="hero-btn">
-            View My Projects
-        </a>
-        <a href="resume.pdf" download class="resume-btn">
-            Download Resume
-        </a>
-    </div>
+        <section class="hero">
 
-    <div class="social-links">
+                <div class="hero-content">
 
-        <a href="https://github.com/AbhiramPasupunoori" target="_blank" class="social-btn github">
-            GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/abhiram-pasupunoori19" target="_blank" class="social-btn linkedin">
-            LinkedIn
-        </a>
-        <a href="mailto:abhi.ram9258@gmail.com" target="_blank" class="social-btn e-mail">
-            E-mail 
-        </a>
+                    <p class="intro">
+                        Hello, I'm
+                    </p>
 
-    </div>
+                    <h1>
+                        Abhiram <span>Pasupunoori</span>
+                    </h1>
 
-</section>
+                    <h2>
+                        Computer Science Engineer
+                    </h2>
 
-<section class="education">
+                    <p class="description">
+                        Passionate about Java development, web technologies,
+                        and building practical software solutions. I enjoy
+                        turning ideas into clean, efficient and user-friendly
+                        applications.
+                    </p>
 
-    <h1>Education</h1>
+                    <div class="hero-buttons">
 
+                        <a href="projects.html" class="project-btn">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            View My Projects
+                        </a>
 
-    <div class="education-container">
+                        <a href="resume.pdf" download class="download-btn">
+                            <i class="fa-solid fa-download"></i>
+                             Download Resume
+                        </a>
 
-   
-        <div class="edu-card">
+                    </div>
 
-            <h3>B.Tech in Computer Science Engineering</h3>
+                </div>
 
-            <p>
-             Anurag University
-            </p>
+                <div class="hero-image">
 
-            <p>
-                2022 - 2026
-            </p>
+                    <div class="image-circle">
 
-        </div>
+                        <img src="images/abhi.jpg"
+                            alt="Profile Photo">
 
-         <div class="edu-card">
-            <h3>Intermediate</h3>
+                    </div>
 
-            <p>Excellencia Junior College</p>
+                    <div class="small-circle"></div>
 
-            <p>2020-2022</p>
-        </div>
+                    <div class="dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
-        <div class="edu-card">
-            <h3>School</h3>
-            <p>Sree Vidyanikethan International School</p>
-            <p>2019-2020</p>
-        </div>
-    </div>
+                </div>
 
-</section>
+                <div class="social-icons">
 
+                    <a href="https://www.linkedin.com/in/abhiram-pasupunoori19/"
+                        target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
 
-<script src="script.js"></script>
-</body>
+                    <a href="https://github.com/AbhiramPasupunoori"
+                        target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhi.ram9258@gmail.com" target="_blank">
+                        <i class="fas fa-envelope"></i>
+                        </a>
+                </div>
+
+                
+        </section>
+
+        <section class="education">
+
+                <h2 class="section-title">Education</h2>
+
+                <div class="slider-wrapper">
+
+                    <button class="slider-btn prev">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+
+                    <div class="slider-container">
+
+                        <div class="education-slider">
+
+                            <div class="edu-card">
+                                <h3>B.Tech in Computer Science Engineering</h3>
+                                <p>Anurag University</p>
+                                <span>2022 - 2026</span>
+                            </div>
+
+                            <div class="edu-card">
+                                <h3>Intermediate</h3>
+                                <p>Excellencia Junior College</p>
+                                <span>2020 - 2022</span>
+                            </div>
+
+                            <div class="edu-card">
+                                <h3>School</h3>
+                                <p>Sree Vidyanikethan International School</p>
+                                <span>2019 - 2020</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button class="slider-btn next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                </div>
+
+        </section>
+
+        <script>
+
+            const slider = document.querySelector('.education-slider');
+            const cards = document.querySelectorAll('.edu-card');
+
+            let index = 0;
+
+            document.querySelector('.next').onclick = () => {
+
+                if(index < cards.length - 1) {
+                    index++;
+                }
+
+                slider.style.transform =
+                    `translateX(-${index * 500}px)`;
+            };
+
+            document.querySelector('.prev').onclick = () => {
+
+                if(index > 0) {
+                    index--;
+                }
+                const cardWidth = document.querySelector('.edu-card').offsetWidth;
+
+                slider.style.transform =
+                    `translateX(-${index * cardWidth}px)`;
+            };
+
+        </script>
+                
+    </body>
+
 </html>
