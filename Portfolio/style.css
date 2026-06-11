@@ -31,12 +31,35 @@ body {
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .logo span {
     color: #00BFFF;
+}
+
+.logo:hover {
+    color: #00BFFF;
+    opacity: 0.9;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
 }
 
 .nav-menu {
@@ -727,6 +750,199 @@ body {
 .experience-content p {
     color: #d1d5db;
     line-height: 1.8;
+}
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+/* ================= PROJECTS SECTION ================= */
+
+.projects {
+    padding: 120px 10%;
+    min-height: 100vh;
+}
+
+.projects-title {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.projects-title::after {
+    content: '';
+    display: block;
+    width: 17%;
+    height: 2px;
+    background: #00BFFF;
+    margin: 3px auto 0;
+    border-radius: 10px;
+}
+
+/* Projects Grid */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+/* Project Cards */
+
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(0, 191, 255, 0.2);
+    border-radius: 25px;
+    padding: 35px;
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.3s ease;
+
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #00BFFF;
+
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.3);
+}
+
+/* Project Content */
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Project Links */
+
+.project-link {
+    text-decoration: none;
+    color: #00BFFF;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    color: white;
+}
+
+.project-link i {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Project Description */
+
+.project-content p {
+    color: #d1d5db;
+    line-height: 1.8;
+    margin-bottom: 25px;
+
+    max-width: 90%;
+}
+
+/* Tech Stack */
+
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech-stack span {
+    background: rgba(0, 191, 255, 0.15);
+    color: #00BFFF;
+
+    padding: 8px 16px;
+    border-radius: 20px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.tech-stack span:hover {
+    background: #00BFFF;
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media (max-width: 992px) {
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        padding: 100px 5%;
+    }
+
+    .projects-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .project-card {
+        padding: 25px;
+    }
+
+    .project-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-content p {
+        font-size: 0.95rem;
+    }
+
+    .projects-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .projects {
+        padding: 90px 20px;
+    }
+
+    .projects-title {
+        font-size: 2rem;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .tech-stack span {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
 }
 /* =========================
    SKILLS SECTION
