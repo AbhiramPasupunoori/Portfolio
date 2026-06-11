@@ -1075,40 +1075,86 @@ button:hover {
 /* =========================
    CONTACT SECTION
 ========================= */
-#contact {
+/* CONTACT SECTION */
+
+.contact {
+    padding: 120px 10%;
+    min-height: 100vh;
+}
+
+.contact-title {
     text-align: center;
-    padding: 60px 20px;
-}
-
-#contact h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: #7fbcdd;
-}
-
-#contact h2 {
-    font-size: 25px;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
-#contact p {
-    font-size: 18px;
-    margin: 10px 0;
+.contact-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    color: #d1d5db;
+}
+
+/* 2×2 Grid Layout */
+
+.contact-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(0, 191, 255, 0.2);
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    border-color: #00BFFF;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+}
+
+.contact-card i {
+    font-size: 2rem;
+    color: #00BFFF;
+}
+
+.contact-card h3 {
+    margin-bottom: 5px;
     color: white;
 }
 
-#contact a {
-    color: white;
+.contact-card p,
+.contact-card a {
+    color: #d1d5db;
     text-decoration: none;
 }
 
-#contact a:hover {
-    color: #7fbcdd;
-    text-decoration: underline;
+.contact-card a:hover {
+    color: #00BFFF;
 }
 
+/* Mobile */
 
-
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
 /* =========================
    ANIMATIONS
 ========================= */

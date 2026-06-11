@@ -32,10 +32,7 @@
                     <li><a href="contact.html">Contact</a></li>    
                 </ul>
 
-                <a href="contact.html" class="resume-nav-btn">
-                    
-                    Let's Talk
-                </a>
+                
         
             </nav>
 
@@ -143,41 +140,42 @@
 
                 <div class="slider-wrapper">
 
-                    <button class="slider-btn prev">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
+                <button class="slider-btn prev-btn" onclick="prevSlide()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
 
-                    <div class="slider-container">
+                <div class="slider-container">
 
-                        <div class="education-slider">
+                    <div class="education-slider">
 
-                            <div class="edu-card">
-                                <h3>B.Tech in Computer Science Engineering</h3>
-                                <p>Anurag University</p>
-                                <span>2022 - 2026</span>
-                            </div>
+                        <div class="edu-card">
+                            <h3>Graduation</h3>
+                            <p>Computer Science (AI-ML)</p>
+                            <p>Anurag University</p>
+                            <span>2022 - 2026</span>
+                        </div>
 
-                            <div class="edu-card">
-                                <h3>Intermediate</h3>
-                                <p>Excellencia Junior College</p>
-                                <span>2020 - 2022</span>
-                            </div>
+                        <div class="edu-card">
+                            <h3>Intermediate</h3>
+                            <p>Excellencia Junior College</p>
+                            <span>2020 - 2022</span>
+                        </div>
 
-                            <div class="edu-card">
-                                <h3>School</h3>
-                                <p>Sree Vidyanikethan International School</p>
-                                <span>2019 - 2020</span>
-                            </div>
-
+                        <div class="edu-card">
+                            <h3>Secondary Education</h3>
+                            <p>Sree Vidyanikethan International School</p>
+                            <span>2019 - 2020</span>
                         </div>
 
                     </div>
 
-                    <button class="slider-btn next">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-
                 </div>
+
+                <button class="slider-btn next-btn" onclick="nextSlide()">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
 
         </section>
 
@@ -186,28 +184,37 @@
             const slider = document.querySelector('.education-slider');
             const cards = document.querySelectorAll('.edu-card');
 
-            let index = 0;
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
 
-            document.querySelector('.next').onclick = () => {
+            let currentIndex = 0;
 
-                if(index < cards.length - 1) {
-                    index++;
+            function updateSlider() {
+
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                prevBtn.style.visibility =
+                    currentIndex === 0 ? 'hidden' : 'visible';
+
+                nextBtn.style.visibility =
+                    currentIndex === cards.length - 1 ? 'hidden' : 'visible';
+            }
+
+            function nextSlide() {
+                if (currentIndex < cards.length - 1) {
+                    currentIndex++;
+                    updateSlider();
                 }
+            }
 
-                slider.style.transform =
-                    `translateX(-${index * 600}px)`;
-            };
-
-            document.querySelector('.prev').onclick = () => {
-
-                if(index > 0) {
-                    index--;
+            function prevSlide() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateSlider();
                 }
-                const cardWidth = document.querySelector('.edu-card').offsetWidth;
+            }
 
-                slider.style.transform =
-                    `translateX(-${index * cardWidth}px)`;
-            };
+            updateSlider();
 
         </script>
                 
